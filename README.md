@@ -6,21 +6,46 @@ The purpose of this repository is to centralize all standards that must be appli
 
 ## Common definitions
 
+### Project Names (Recommendation)
 * The name of the projects in this organization should follow the standard `aerogear-<project-name>`. 
 
-## Common definitions by stack
+### Cover Tests
+* [Coveralls.io](https://coveralls.io/github/aerogear/)
+* [Codecov.io](https://codecov.io/gh/aerogear)
+
+### CI 
+* [Shields.io](https://shields.io/#/) - For customizations
+* [Circleci](https://circleci.com/)
+* [Jenkins](https://jenkins.io/)
+
+### Versionalization
+* [Semantic Versioning 2.0.0](https://semver.org/) 
+
+### Internationalization
+* [Zanata](http://zanata.org/)
+
+### Allow Data Manipulation
+* [GraphQL](https://graphql.org/learn/)
+* [Rest API](https://www.restapitutorial.com/)
+
+## Definitions by stack
 
 ### NodeJS/Javascript 
-
 * [JavaScript Standard Style](https://standardjs.com/)
-
-// TODO: Add definitions for which will be used and how to lint, and manager tasks, and to cover the tests, and implement the tests, etc .. 
+* [Npm-run-script](https://docs.npmjs.com/cli/run-script) 
+* [Semver npm](https://www.npmjs.com/package/semver)
+* [Expressjs](http://expressjs.com/)
+* [Yargs](https://www.npmjs.com/package/yargs)
+* [MochaJS](https://mochajs.org/)
 
 ### Go
+<- TODO ->
 
-// TODO: Add definitions for which will be used and how to lint, and manager tasks, and to cover the tests, and implement the tests, etc .. 
+### Java
+<- TODO ->
 
-## Scripts
+
+## Scripts of this repository
 
 ### Applying .github file changes to organization repositories
 
@@ -52,3 +77,4 @@ npm run getAll
 * This code implementation is using the [octokit](https://github.com/octokit)
 * See [here](https://developer.github.com/v3) the GitHub API documentation
 * The repos will created ar `../build` directory  
+
