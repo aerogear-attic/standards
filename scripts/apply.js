@@ -40,7 +40,6 @@ async function execScript() {
         await exec(`git commit -m"Update github files"`, { cwd: repoPath });
         await exec(`git push origin +${branch}:${branch}`, { cwd: repoPath });
         await exec(`open https://github.com/${org}/${repo}/compare/${branch}?expand=1`)
-        //const result = await octokit.pullRequests.create({ owner: "wtrocki", repo: repo, title: "Update github files", head: branch, base: "master", body: "Update github files" })
     }
 
 }
