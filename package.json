@@ -4,7 +4,8 @@
   "description": "## About",
   "main": "index.js",
   "scripts": {
-    "dryrun": "echo \"Error: no test specified\" && exit 1"
+    "apply": "./scripts/apply.js",
+    "clean": "rm -Rf ./build/*"
   },
   "repository": {
     "type": "git",
@@ -17,6 +18,7 @@
   },
   "homepage": "https://github.com/aerogear/standards#readme",
   "dependencies": {
-    "@octokit/rest": "^15.12.0"
+    "@octokit/rest": "^15.12.0",
+    "await-exec": "^0.1.2"
   }
 }
