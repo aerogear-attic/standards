@@ -22,7 +22,10 @@ The purpose of this repository is to centralize all standards that must be appli
 
 // TODO: Add definitions for which will be used and how to lint, and manager tasks, and to cover the tests, and implement the tests, etc .. 
 
-## Applying standards
+## Applying changes to organization repositories
+
+Standards in this repository can be applied to all organization repositories.
+To update standards in AeroGear organization please follow steps bellow:
 
 1. Execute following commands to prepare repository
 
@@ -32,6 +35,9 @@ npm run clean
 ```
 
 2. Review apply.js script with repositories that you want to update
+
+Review `reposToClone` value to see what repositories we should use to apply the changes.
+
 3. Execute apply method
 
 ```
