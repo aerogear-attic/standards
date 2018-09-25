@@ -11,7 +11,6 @@ const branch = "update-github"
  * @type {string[]}
  */
 const reposToClone = ["aerogear-android-cookbook"]
-
 const buildPath = join(__dirname, '../build');
 
 async function execScript() {
@@ -27,7 +26,7 @@ async function execScript() {
         await exec(`git commit -m"Update github files"`, { cwd: repoPath });
         console.info(`git push origin +${branch}:${branch}`)
         await exec(`git push origin +${branch}:${branch}`, { cwd: repoPath });
-        
+        await exec(`open https://github.com/${org}/${repo.name}/compare/${branch}?expand=1`);
     }
 }
 

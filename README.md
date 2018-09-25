@@ -47,7 +47,6 @@ npm run getAll
 
 2. Check that a file with the name allRepos.txt will be created in the root directory of this project. This data can be used in the above command. 
 
-
 **NOTES**
 
 * This code implementation is using the [octokit](https://github.com/octokit)
