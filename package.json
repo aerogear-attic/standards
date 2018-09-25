@@ -4,7 +4,7 @@
   "description": "## About",
   "main": "index.js",
   "scripts": {
-    "applyAll": "npm run clean && ./scripts/applyAll.js",
+    "getAll": "./scripts/getAll.js",
     "apply": "npm run clean && ./scripts/apply.js",
     "clean": "rm -Rf ./build/*"
   },
@@ -18,9 +18,10 @@
     "url": "https://github.com/aerogear/standards/issues"
   },
   "homepage": "https://github.com/aerogear/standards#readme",
-  "dependencies": {
+  "devDependencies": {
     "@octokit/rest": "^15.12.0",
-    "await-exec": "^0.1.2"
+    "await-exec": "^0.1.2",
+    "write-file": "^1.0.0"
   },
   "engines": {
     "node": ">=8"
