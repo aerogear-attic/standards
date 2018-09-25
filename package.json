@@ -1,0 +1,29 @@
+{
+  "name": "standards",
+  "version": "1.0.0",
+  "description": "## About",
+  "main": "index.js",
+  "scripts": {
+    "getAll": "./scripts/getAll.js",
+    "apply": "npm run clean && ./scripts/apply.js",
+    "clean": "rm -Rf ./build/*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aerogear/standards.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aerogear/standards/issues"
+  },
+  "homepage": "https://github.com/aerogear/standards#readme",
+  "devDependencies": {
+    "@octokit/rest": "^15.12.0",
+    "await-exec": "^0.1.2",
+    "write-file": "^1.0.0"
+  },
+  "engines": {
+    "node": ">=8"
+  }
+}
