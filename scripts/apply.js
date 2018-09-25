@@ -6,24 +6,11 @@ const { join } = require('path');
 const org = "aerogear"
 const branch = "update-github"
 
-// This could be populated manually or by getAllOrgs - we probably want to skip some repositories
-const reposToClone = ["aerogear-android-cookbook"]
-
-// Helper function
-function getAllOrgs() {
-    // Compare: https://developer.github.com/v3/repos/#list-organization-repositories
-    octokit.repos.getForOrg({
-        org: 'aerogear',
-        type: 'public'
-    }).then(({ data, headers, status }) => {
-        // handle data
-        if (data && data instanceof Array) {
-            data.forEach((repo) => {
-                console.log(repo.ssh_url)
-            })
-        }
-    })
-}
+/**
+ * Define here the repos which you would like to update the github files.
+ * @type {string[]}
+ */
+var reposToClone = ["aerogear-android-cookbook"]
 
 const buildPath = join(__dirname, '../build');
 
@@ -38,10 +25,10 @@ async function execScript() {
         await exec(`git checkout -b ${branch}`, { cwd: repoPath });
         await exec(`git add --all`, { cwd: repoPath });
         await exec(`git commit -m"Update github files"`, { cwd: repoPath });
+        console.log(`git push origin +${branch}:${branch}`)
         await exec(`git push origin +${branch}:${branch}`, { cwd: repoPath });
         await exec(`open https://github.com/${org}/${repo}/compare/${branch}?expand=1`)
     }
-
 }
 
 execScript();
