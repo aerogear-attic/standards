@@ -36,7 +36,7 @@ npm i
 npm run apply
 ```
 
-### Getting all repositories to use in the following script
+### Getting all repositories to use in the above script
 
 1. Execute following commands 
 
@@ -45,7 +45,7 @@ npm i
 npm run getAll
 ```
 
-2. Check that a file with the name allRepos.txt will be created in the root directory of this project. This data can be used in the above command. 
+2. Check the file `allRepos.txt` created in the root directory of this project. This data can be used in the above command. 
 
 **NOTES**
 
