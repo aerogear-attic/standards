@@ -4,11 +4,9 @@
 
 The purpose of this repository is to centralize all standards that must be applied to AeroGear projects.
 
-
 ## Common definitions
 
 * The name of the projects in this organization should follow the standard `aerogear-<project-name>`. 
-
 
 ## Common definitions by stack
 
@@ -22,24 +20,35 @@ The purpose of this repository is to centralize all standards that must be appli
 
 // TODO: Add definitions for which will be used and how to lint, and manager tasks, and to cover the tests, and implement the tests, etc .. 
 
-## Applying changes to organization repositories
+## Scripts
+
+### Applying .github file changes to organization repositories
 
 Standards in this repository can be applied to all organization repositories.
 To update standards in AeroGear organization please follow steps bellow:
 
-1. Execute following commands to prepare repository
+### To update all organization
+
+1. Execute following commands 
 
 ```
 npm i
-npm run clean
+npm run applyAll
 ```
 
-2. Review apply.js script with repositories that you want to update
+### To update specific repositories
 
-Review `reposToClone` value to see what repositories we should use to apply the changes.
+1. Review apply.js script with repositories that you want to update. Check the constant `reposToClone` value to see what repositories we should use to apply the changes.
 
-3. Execute apply method
+2. Execute following commands 
 
 ```
+npm i
 npm run apply
 ```
+
+**NOTES**
+
+* This code implementation is using the [octokit](https://github.com/octokit)
+* See [here](https://developer.github.com/v3) the GitHub API documentation
+* The repos will created ar `../build` directory  

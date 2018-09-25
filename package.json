@@ -4,7 +4,8 @@
   "description": "## About",
   "main": "index.js",
   "scripts": {
-    "apply": "./scripts/apply.js",
+    "applyAll": "npm run clean && ./scripts/applyAll.js",
+    "apply": "npm run clean && ./scripts/apply.js",
     "clean": "rm -Rf ./build/*"
   },
   "repository": {
@@ -20,5 +21,8 @@
   "dependencies": {
     "@octokit/rest": "^15.12.0",
     "await-exec": "^0.1.2"
+  },
+  "engines": {
+    "node": ">=8"
   }
 }
