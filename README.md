@@ -27,17 +27,6 @@ The purpose of this repository is to centralize all standards that must be appli
 Standards in this repository can be applied to all organization repositories.
 To update standards in AeroGear organization please follow steps bellow:
 
-### To update all organization
-
-1. Execute following commands 
-
-```
-npm i
-npm run applyAll
-```
-
-### To update specific repositories
-
 1. Review apply.js script with repositories that you want to update. Check the constant `reposToClone` value to see what repositories we should use to apply the changes.
 
 2. Execute following commands 
@@ -46,6 +35,17 @@ npm run applyAll
 npm i
 npm run apply
 ```
+
+### Getting all repositories to use in the following script
+
+1. Execute following commands 
+
+```
+npm i
+npm run getAll
+```
+
+2. Check that a file with the name allRepos.txt will be created in the root directory of this project. This data can be used in the above command. 
 
 **NOTES**
 
