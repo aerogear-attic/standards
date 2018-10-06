@@ -15,15 +15,17 @@ let excludeRepos = ["standards"]
  */
 async function execScript() {
   // Compare: https://developer.github.com/v3/repos/#list-organization-repositories
+  let dt = new Date();
+  dt.setFullYear(dt.getFullYear() -1);
+  console.info('This search will return just the repos updated after' + dt);
   paginate(() => octokit.repos.getForOrg({
     org: 'aerogear',
-    type: 'public',
     archived: false
   })).then(data => {
     // handle data
     if (data && data instanceof Array) {
       data.forEach((repo) => {
-        if ( excludeRepos.indexOf(repo.name) === -1){
+        if ( excludeRepos.indexOf(repo.name) === -1 && !repo.archived && new Date(repo.updated_at) > dt){
           repos.push(repo.name)
         }
       });
