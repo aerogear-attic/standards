@@ -114,7 +114,11 @@ async function execScript() {
         await exec(`git clone git@github.com:${org}/${repo}.git`, { cwd: buildPath });
         console.info(`Copy github ${org}/${repo}.git`)
         const repoPath = join(buildPath, repo)
-        await exec(`cp -Rf ../../.github ./.github`, { cwd: repoPath });
+        if (fs.existsSync(repoPath + "/.github/")) {
+            await exec(`cp -Rf ../../.github/* ./.github/`, { cwd: repoPath });
+        } else {
+            await exec(`cp -Rf ../../.github ./.github`, { cwd: repoPath });
+        }
         console.info(`Create PR github`)
         await exec(`git checkout -b ${branch}`, { cwd: repoPath });
         await exec(`git add --all`, { cwd: repoPath });
