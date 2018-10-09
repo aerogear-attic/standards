@@ -7,11 +7,14 @@
 ## Expected result
 <!--Describe what you had expected to happen.-->
 
-## Testing environment
+## Environment
 
 * Operating system:
-* OpenShift versions:
-* Project Versions: 
+* OpenShift version:
+* Project (and feature) version: 
 
 ## Steps to reproduce
-<!--Describe all steps and pre-requirements which are required to be performed in order to reproduce this scenario.-->
+<!--Describe all steps and pre-requirements which are required to be performed in order to reproduce this scenario.
+* Step 1: Do this
+* Step 2: Do that-->
+
