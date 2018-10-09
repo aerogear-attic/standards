@@ -11,7 +11,7 @@
 
 * Operating system:
 * OpenShift version:
-* Project (and feature) version: 
+* Project version: 
 
 ## Steps to reproduce
 <!--Describe all steps and pre-requirements which are required to be performed in order to reproduce this scenario.
