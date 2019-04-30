@@ -1,0 +1,121 @@
+ifdef::env-github[]
+:status:
+:tip-caption: :bulb:
+:note-caption: :information_source:
+:important-caption: :heavy_exclamation_mark:
+:caution-caption: :fire:
+:warning-caption: :warning:
+:table-caption!:
+endif::[]
+
+
+:toc:
+:toc-placement!:
+
+= Standards
+
+ifdef::status[]
+.*Project health*
+image:https://img.shields.io/:license-Apache2-blue.svg[License (License), link=http://www.apache.org/licenses/LICENSE-2.0]
+endif::[]
+
+:toc:
+toc::[]
+
+== Overview
+
+The purpose of this repository is to centralize all standards that must be applied to AeroGear projects.
+
+== Common definitions
+
+=== Project Names (Recommendation)
+* The name of the projects in this organization should follow the standard `aerogear-<project-name>`. 
+
+=== Documentation
+* https://asciidoctor.org/[.adoc] - (Format for the docs in the repo)
+* https://swagger.io/[swagger.io]
+
+=== Cover Tests
+* https://coveralls.io/github/aerogear/[Coveralls.io]
+* https://codecov.io/gh/aerogear[Codecov.io]
+
+=== CI
+* https://shields.io/#/[Shields.io] - For customizations
+* https://circleci.com/[Circleci]
+* https://jenkins.io/[Jenkins]
+
+=== Versioning
+* https://semver.org/[Semantic Versioning 2.0.0]
+
+=== Internationalization
+* http://zanata.org/[Zanata]
+
+=== Images
+* https://quay.io/organization/aerogear/[quay.io]
+
+=== Allow Data Manipulation
+* https://graphql.org/learn/[GraphQL]
+* https://www.restapitutorial.com/[Rest API]
+
+== Definitions by stack
+
+=== NodeJS/Javascript
+* https://standardjs.com/[JavaScript Standard Style]
+* https://docs.npmjs.com/cli/run-script[Npm-run-script]
+* https://www.npmjs.com/package/semver[Semver npm]
+* http://expressjs.com/[Expressjs]
+* https://www.npmjs.com/package/yargs[Yargs]
+* https://mochajs.org/[MochaJS]
+
+=== Go
+
+* https://golang.org/pkg/testing/[testing]
+
+IMPORTANT: Do not use other lib as for example https://godoc.org/github.com/stretchr/testify/assert[assert]
+
+* https://echo.labstack.com/[echo web framework]
+
+
+=== Java
+<- TODO ->
+
+=== Operators
+* https://github.com/operator-framework/operator-sdk[operator-sdk]
+* https://golang.org/[Golang] type/language
+* https://github.com/kubernetes/client-go[kubernetes/client-go]
+* https://kubernetes.io/docs/concepts/overview/kubernetes-api/[kubernetes API]
+
+== Scripts
+
+=== Applying .github file changes to organization repositories
+
+Standards in this repository can be applied to all organization repositories.
+To update standards in AeroGear organization please follow steps bellow:
+
+* Review apply.js script with repositories that you want to update. Check the constant `reposToClone` value to see what repositories we should use to apply the changes.
+
+* Execute following commands
+
+[source,shell]
+----
+npm i
+npm run apply
+----
+
+=== Getting all repositories to use in the above script
+
+* Execute following commands
+
+[source,shell]
+----
+npm i
+npm run getAll
+----
+
+* Check the file `allRepos.txt` created in the root directory of this project. This data can be used in the above command.
+
+NOTE: This code implementation is using the https://github.com/octokit[octokit]
+
+TIP: See https://developer.github.com/v3[here] the GitHub API documentation
+
+
